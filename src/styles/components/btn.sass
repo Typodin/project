@@ -1,0 +1,56 @@
+.btn
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  position: relative
+  line-height: 1 !important
+  white-space: nowrap
+  vertical-align: middle
+  user-select: none
+  text-decoration: none !important
+  box-sizing: border-box
+  max-width: 100% !important
+  transition-duration: .2s
+  border-radius: 3px
+  span
+    font-family: $font-title
+    transition-duration: .2s
+    color: inherit
+  &:hover
+    cursor: pointer
+  &.disabled
+    pointer-events: none
+    opacity: .8
+  &.loading
+    span,
+    .icon
+      opacity: 0
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 50%
+      left: 50%
+      margin: -8px 0 0 -8px
+      height: 16px
+      width: 16px
+      border-width: 2px
+      border-style: solid
+      border-radius: 50%
+      animation: spin 1s infinite linear
+      border-color: rgba($white,.5)
+      border-top-color: $white
+
+
+
+@-webkit-keyframes spin
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(359deg)
+
+@keyframes spin
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(359deg)

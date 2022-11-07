@@ -1,0 +1,39 @@
+.clearfix:before,
+.clearfix:after
+  content: ' '
+  display: table
+
+.clearfix:after
+  clear: both
+
+.fix-opacity
+  opacity: 0
+
+.no-scroll
+  overflow: hidden
+
+.d-none
+  display: none
+
+.ttu
+  text-transform: uppercase
+
+hr
+  border-top: 1px solid rgba(0, 0, 0, 0.1)
+  box-sizing: content-box
+  height: 0
+  overflow: visible
+
+.container
+  width: 100%
+  max-width: 100%
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+  +breakpoint(l)
+    padding-right: 20px
+    padding-left: 20px
+  +breakpoint(xl)
+    padding-right: 30px
+    padding-left: 30px
