@@ -1,0 +1,49 @@
+.portfolio-item
+  display: flex
+  flex-direction: column-reverse
+  +breakpoint(s)
+    flex-direction: row
+    gap: 30px
+  +breakpoint(m)
+    align-items: center
+    gap: 50px
+  +breakpoint(ml)
+    gap: 80px
+  &:not(:last-child)
+    margin-bottom: 40px
+    +breakpoint(m)
+      margin-bottom: 60px
+    +breakpoint(l)
+      margin-bottom: 90px
+  &:nth-child(odd)
+    +breakpoint(s)
+      flex-direction: row-reverse
+  &-content
+    +breakpoint(s)
+      flex: 0 1 auto
+      width: calc(50% - 30px)
+    +breakpoint(m)
+      width: calc(40% - 50px)
+    +breakpoint(ml)
+      width: calc(40% - 80px)
+    &-title
+      margin-bottom: 20px
+    &-text
+      margin-bottom: 30px
+      span
+        color: $dark-1
+    &-type
+      text-transform: uppercase
+      font-size: $text-15
+      font-weight: $fw-bold
+      color: $grey-1
+  &-img
+    margin-bottom: 20px
+    +breakpoint(s)
+      margin-bottom: 0
+      flex: 0 1 auto
+      width: 50%
+    +breakpoint(m)
+      width: 60%
+    img
+      width: 100%

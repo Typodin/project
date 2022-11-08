@@ -1,0 +1,12 @@
+.contacts
+  display: flex
+  flex-wrap: wrap
+  gap: 20px
+  &-row
+    flex: 0 1 auto
+    &:not(.contacts-row-full)
+      width: 100%
+      +breakpoint(m)
+        width: calc(50% - 10px)
+    &-full
+      width: 100%

@@ -1,0 +1,30 @@
+.strengths
+  +breakpoint(s)
+    display: flex
+    flex-wrap: wrap
+    gap: 16px
+  &-item
+    background-color: $white
+    padding: 15px
+    margin-bottom: 20px
+    +breakpoint(s)
+      margin-bottom: 0
+      flex: 0 1 auto
+      padding: 25px 20px 30px
+      width: calc(50% - 8px)
+    +breakpoint(l)
+      width: calc(25% - 12px)
+      padding: 35px 30px 40px
+    &-icon
+      width: 64px
+      height: 64px
+      display: flex
+      margin-bottom: 20px
+      +breakpoint(s)
+        width: 80px
+        height: 80px
+      svg
+        object-fit: contain
+    &-title
+      font-size: $text-22
+      margin-bottom: 15px

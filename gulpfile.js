@@ -10,9 +10,7 @@ const gcmq = require('gulp-group-css-media-queries');
 const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
-const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
-const replace = require('gulp-replace');
 const gulpif = require('gulp-if');
 
 const env = process.env.NODE_ENV;
@@ -70,28 +68,16 @@ task('styles', () => {
 task('scripts', () => {
   return src(`${SRC_PATH}/scripts/main/*.js`)
     .pipe(concat('main.js'))
-    .pipe(
+    .pipe(gulpif(env === 'prod',
       babel({
         presets: ['@babel/env'],
       })
-    )
+    ))
     .pipe(dest(`${DIST_PATH}/js/`));
 })
 
 task('icons:svg', () => {
   return src(`${SRC_PATH}/img/icons/*.svg`)
-    .pipe(
-      svgo({
-        plugins: [
-          {
-            removeAttrs: {
-              attrs: '(width|height|data.*)',
-            },
-          },
-        ],
-      })
-    )
-    .pipe(replace('&gt;', '>'))
     .pipe(
       svgSprite({
         mode: {

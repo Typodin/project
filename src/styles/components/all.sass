@@ -1,22 +1,18 @@
-.clearfix:before,
-.clearfix:after
-  content: ' '
-  display: table
+.bg-grey
+  background-color: $grey-0
 
-.clearfix:after
-  clear: both
-
-.fix-opacity
-  opacity: 0
-
-.no-scroll
-  overflow: hidden
-
-.d-none
-  display: none
+.section-padding
+  padding: 40px 0
+  +breakpoint(m)
+    padding: 50px 0 60px
+  +breakpoint(l)
+    padding: 80px 0 90px
 
 .ttu
   text-transform: uppercase
+  
+.text-center
+  text-align: center
 
 hr
   border-top: 1px solid rgba(0, 0, 0, 0.1)
@@ -32,8 +28,55 @@ hr
   margin-right: auto
   margin-left: auto
   +breakpoint(l)
-    padding-right: 20px
-    padding-left: 20px
-  +breakpoint(xl)
     padding-right: 30px
     padding-left: 30px
+  +breakpoint(xl)
+    max-width: $xl-screen
+
+.tooltip-bottom
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: 100%
+    left: calc(50% - 5px)
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 0 5px 5px 5px
+    border-color: transparent transparent $dark-0 transparent
+    opacity: 0
+  &:after
+    content: attr(data-name)
+    position: absolute
+    top: calc(100% + 5px)
+    left: 50%
+    padding: 5px 10px
+    border-radius: 3px
+    background-color: $dark-0
+    color: $white
+    font-size: $text-13
+    transform: rotateY(90deg)
+  &:hover
+    &:before,
+    &:after
+      transition-duration: .2s
+    &:before
+      opacity: 1
+    &:after
+      transform: translateX(-50%)
+
+.link-underline
+  font-weight: $fw-bold
+  border-bottom: 4px solid $theme-1
+  padding-bottom: 2px
+  &:hover
+    border-bottom-color: transparent
+    color: $theme-2
+
+.disclaymer
+  color: $grey-3
+  font-size: $text-16
+  font-style: italic
+  +breakpoint(m)
+    font-size: $text-20

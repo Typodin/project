@@ -1,0 +1,16 @@
+extends base/layouts/basic
+block vars
+  - var page = 'contacts'
+block title
+  title Contacts | Alex project
+block content
+  +top(
+    '<span>Contact</span> me if you have any questions',
+    '',
+    '',
+    '',
+    '',
+    '/images/top/top-contact.jpg',
+    'mb-100'
+    )
+  include base/layouts/content/contactsForm

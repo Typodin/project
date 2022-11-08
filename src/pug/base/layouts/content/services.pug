@@ -1,0 +1,23 @@
+-
+    var servicesList = [
+      {icon: 'icon-web-design', title: 'UI / UX Design', text: 'The smart and modern design of web applications will be appreciated by your users.'},
+      {icon: 'icon-web-dev', title: 'Web Development', text: 'Professionally made projects of any complexity level with modern design and the highest reliability.'},
+      {icon: 'icon-audit', title: 'Audit & Optimization', text: 'I find technical problems, usability, and SEO issues in your website. Identify and offer solutions to resolve them.'},
+      {icon: 'icon-mobile', title: 'Mobile Application', text: 'Development, publication, and technical support of mobile applications for iOS and Android.'},
+      {icon: 'icon-devops', title: 'Devops', text: 'Software deployment service that will be a reliable link between product development and operation.'},
+      {icon: 'icon-maintenance', title: 'Maintenance', text: 'Professional technical support for any projects: from websites and web services to mobile applications.'}
+    ]
+
+mixin service(item)
+  .services-item
+    .services-item-icon
+      i.icon(class= item.icon)
+    h3.services-item-title= item.title
+    span.services-item-text= item.text
+
+section.bg-grey.section-padding
+  .container
+    +pagetitle('Services', 'I have several<br>services for you', 'mb-60')
+    .services
+      for item in servicesList
+        +service(item)

@@ -1,0 +1,16 @@
+extends base/layouts/basic
+block vars
+  - var page = 'works'
+block title
+  title Work | Alex project
+block content
+  +top(
+    'Some of my best <span>work</span>',
+    '',
+    'While creating a web projects design I guide by the most important principles to make them comfortable, usable, and functional. I pay extra attention to compliance with Mobile - First requirements, the usability of the content, and user conveniences.',
+    '',
+    '',
+    '/images/top/top-work.jpg',
+    ''
+    )
+  include base/layouts/content/portfolio

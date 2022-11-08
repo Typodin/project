@@ -1,0 +1,68 @@
+.footer
+  background-color: $dark-0
+  color: $grey-0
+  padding: 30px 0
+  +breakpoint(s)
+    padding: 80px 0 30px
+  a
+    color: $grey-0
+    &:hover
+      color: $theme-1
+  &-wrap
+    margin-bottom: 40px
+    +breakpoint(s)
+      display: flex
+      flex-wrap: wrap
+  &-contacts,
+  &-col
+    flex: 0 1 auto
+  &-contacts
+    margin-bottom: 30px
+    +breakpoint(s)
+      width: 50%
+    +breakpoint(m)
+      margin-bottom: 0
+      width: 34%
+    +breakpoint(l)
+      width: 40%
+    &-logo
+      margin-bottom: 25px
+      svg
+        width: 36px
+        height: 36px
+    &-item
+      position: relative
+      padding-left: 30px
+      margin-bottom: 20px
+      line-height: 1.5
+      & > .icon
+        position: absolute
+        left: 0
+        opacity: .5
+        &.icon-location-pin
+          top: 1px
+          font-size: $text-24
+        &.icon-mail
+          top: 3px
+          font-size: $text-20
+  &-col
+    &-title
+      color: $grey-1
+      margin-bottom: 15px
+    &-list
+      li
+        margin-bottom: 15px
+  &-col
+    margin-bottom: 30px
+    +breakpoint(s)
+      margin-bottom: 0
+      width: 50%
+    +breakpoint(m)
+      width: 22%
+    +breakpoint(l)
+      width: 20%
+  &-bottom
+    font-size: $text-14
+    font-style: italic
+    span
+      color: $grey-1

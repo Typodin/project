@@ -1,0 +1,11 @@
+mixin pagetitle(subtitle, title, bottomClass)
+  .pagetitle(class= bottomClass)
+    .pagetitle-top: span= subtitle
+    h2.pagetitle-item !{title}
+
+//- +pagetitle('subtitle', 'title', 'bottomClass')
+
+mixin disclaymer(text, bottomClass)
+  .disclaymer(class= bottomClass)= text
+
+//- +disclaymer('text', 'bottomClass')

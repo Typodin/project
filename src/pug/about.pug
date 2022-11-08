@@ -1,0 +1,17 @@
+extends base/layouts/basic
+block vars
+  - var page = 'about'
+block title
+  title About | Alex project
+block content
+  +top(
+    'Some <span>info</span> about me',
+    '',
+    'I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that.',
+    '',
+    '',
+    '/images/top/top-about.jpg',
+    'mb-100'
+    )
+  include base/layouts/content/skills
+  include base/layouts/content/about

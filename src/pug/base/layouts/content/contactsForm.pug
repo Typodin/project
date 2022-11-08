@@ -1,0 +1,60 @@
+section.section-padding.bg-grey
+  .container
+    +pagetitle('Get in Touch', 'If you have any questions, or a project you want to<br> make happen, let me know', 'mb-60')
+    form(
+      action="https://send.pageclip.co/FPlfStz6xmb6be96QvRfnaIgZ0dttKXx"
+      id="contactForm"
+      class="pageclip-form"
+      method="post")
+      .contacts
+
+        .contacts-row
+          +input(
+            'First Name',
+            'f-req f-val-name',
+            'text',
+            'firstName',
+            'validate-name',
+            'Input your first name in here'
+          )
+
+        .contacts-row
+          +input(
+            'Last Name',
+            '_labelClass',
+            'text',
+            'lastName',
+            '_inputClass',
+            'Input your last name in here'
+          )
+
+        .contacts-row
+          +input(
+            'Email Address',
+            'f-req f-val-email',
+            'text',
+            'mail',
+            'validate-email',
+            'Input your email address in here'
+          )
+
+        .contacts-row
+          +input(
+            'Subject',
+            '_labelClass',
+            'text',
+            'subject',
+            '_inputClass',
+            'Input your subject in here'
+          )
+
+        .contacts-row.contacts-row-full
+          +textarea(
+            'Messages',
+            'message',
+            'Write your messages in here',
+            '5'
+          )
+
+        .contacts-row.contacts-row-full
+          button.btn.btn-medium.btn-theme(type='submit'): span Send Messages

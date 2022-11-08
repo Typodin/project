@@ -1,0 +1,61 @@
+.skills
+  +breakpoint(l)
+    display: flex
+  &-col
+    +breakpoint(l)
+      flex: 0 1 auto
+      width: 50%
+    &-list
+      border-left: 3px solid rgba($grey-3, .4)
+      margin-left: 15px
+      +breakpoint(m)
+        padding: 0 60px 0 0
+
+.skills-item
+  margin-bottom: 30px
+  position: relative
+  padding-left: 40px
+  &:before
+    content: ''
+    position: absolute
+    top: 33px
+    left: -14px
+    width: 25px
+    height: 25px
+    border: 3px solid rgba($grey-3, .4)
+    border-radius: 50%
+    background-color: $white
+    z-index: 2
+    transition-duration: .2s
+  &:after
+    content: ''
+    position: absolute
+    left: 7px
+    top: 44px
+    height: 3px
+    width: 34px
+    background-color: rgba($grey-3, .4)
+    z-index: 1
+  &:hover
+    &:before
+      border-color: $grey-3
+      background-color: $theme-1
+  &-wrap
+    padding: 30px
+    background-color: $white
+    position: relative
+    z-index: 3
+  &-title
+    font-size: $text-20
+    margin-bottom: 10px
+  &-place
+    display: block
+    font-size: $text-16
+    font-weight: $fw-bold
+    color: $grey-1
+    margin-bottom: 10px
+  &-text
+    font-size: $text-15
+    color: $dark-1
+
+

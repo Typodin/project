@@ -1,0 +1,35 @@
+mixin input(label, labelClass, inputType, inputName, inputClass, placeholder)
+  if (label !== '_label')
+    label.f-label(class= ((labelClass === '_labelClass') ? '' : labelClass))= label
+  input(
+    type= inputType
+    value=''
+    name= inputName
+    class= ((inputClass === '_inputClass') ? '' : inputClass)
+    placeholder= ((placeholder === '_placeholder') ? '' : placeholder)
+  )
+
+//- +input(
+      '_label',
+      '_labelClass',
+      '_inputType',
+      '_inputName',
+      '_inputClass',
+      '_placeholder'
+      )
+
+mixin textarea(label, tName, placeholder, rowsNum)
+  if (label !== '_label')
+    label.f-label= label
+  textarea(
+    name= tName
+    placeholder= ((placeholder === '_placeholder') ? '' : placeholder)
+    rows= ((rowsNum === '_rowsNum') ? '' : rowsNum)
+  )
+
+//- +textarea(
+      '_label',
+      '_tName',
+      '_placeholder',
+      '_rowsNum'
+      )

@@ -13,44 +13,26 @@
   transition-duration: .2s
   border-radius: 3px
   span
-    font-family: $font-title
+    font-family: $font-main
     transition-duration: .2s
     color: inherit
   &:hover
     cursor: pointer
-  &.disabled
-    pointer-events: none
-    opacity: .8
-  &.loading
-    span,
-    .icon
-      opacity: 0
-    &:after
-      content: ''
-      display: block
-      position: absolute
-      top: 50%
-      left: 50%
-      margin: -8px 0 0 -8px
-      height: 16px
-      width: 16px
-      border-width: 2px
-      border-style: solid
-      border-radius: 50%
-      animation: spin 1s infinite linear
-      border-color: rgba($white,.5)
-      border-top-color: $white
-
-
-
-@-webkit-keyframes spin
-  from
-    transform: rotate(0deg)
-  to
-    transform: rotate(359deg)
-
-@keyframes spin
-  from
-    transform: rotate(0deg)
-  to
-    transform: rotate(359deg)
+  &-small
+    height: 41px
+    padding: 0 16px
+    border-radius: 5px
+    span
+      font-size: $text-14
+  &-medium
+    height: 56px
+    padding: 0 28px
+    border-radius: 5px
+    span
+      font-size: $text-15
+  &-theme
+    background-color: $theme-1
+    span
+      color: $white
+    &:hover
+      background-color: $theme-2

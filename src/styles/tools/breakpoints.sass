@@ -45,11 +45,5 @@
   @else if $point == xl
     @media (min-width: $xl-screen)
       @content
-  @else if $point == xxl
-    @media (min-width: $xxl-screen)
-      @content
-  @else if $point == max
-    @media (min-width: $max-screen)
-      @content
   @else
     @warn "Not a valid breakpoint name."

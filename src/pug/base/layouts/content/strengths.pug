@@ -1,0 +1,21 @@
+-
+    var strengthsList = [
+      {icon: 'img/icons/icons.svg#why-01', title: 'Reputation', text: 'For more than 10 years I have been creating professional web projects of any complexity level from small websites to scalable online stores and corporate portals and more. '},
+      {icon: 'img/icons/icons.svg#why-02', title: 'Creative', text: 'The first thing that the user sees is a design of the site and I make it creative and comfortable so that the user stays on the page and comes back to you again, helping the complicated task look simple.'},
+      {icon: 'img/icons/icons.svg#why-03', title: 'Research', text: 'I also conduct research on an existing project, helping to identify and eliminate factors slowing down your business, as well as find new ways for its development. This approach can save you from expenses.'},
+      {icon: 'img/icons/icons.svg#why-04', title: 'Maintenance', text: 'I provide professional technical support for the stable and smooth operation of your website or application. The experience and the tools I use will help to avoid a lot of violations in your service.'}
+    ]
+
+mixin strengths(item)
+  .strengths-item
+    .strengths-item-icon
+      svg: use(xlink:href= item.icon)
+    h3.strengths-item-title= item.title
+    span.strengths-item-text= item.text
+
+section.bg-grey.section-padding
+  .container
+    +pagetitle('MY Core Values', 'I have several values that are<br>my strengths', 'mb-60')
+    .strengths
+      for item in strengthsList
+        +strengths(item)

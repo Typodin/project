@@ -1,0 +1,24 @@
+-
+    var portfolioList = [
+      {img: 'images/works/img-00.jpg', title: 'Food Market Place<br>Web Design', type: 'Web Design'},
+      {img: 'images/works/img-01.jpg', title: 'Work Out<br>Application', type: 'Mobile apps'},
+      {img: 'images/works/img-02.jpg', title: 'Travel Apps <br>Web Design', type: 'Web Design'},
+      {img: 'images/works/img-03.jpg', title: 'NFT Dashboard<br>Application Development', type: 'Mobile apps'}
+    ]
+
+mixin portfolio(item)
+  .portfolio-item
+    .portfolio-item-content
+      h3.portfolio-item-content-title !{item.title}
+      .portfolio-item-content-text: span There are always some stocks, which illusively scale lofty heights in a given time period. However, the good show doesn’t last for these overblown toxic stocks as their current price is not justified by their fundamental strength.
+      .portfolio-item-content-type: span= item.type
+    .portfolio-item-img
+      img(src= item.img loading='lazy' alt='Portfolio')
+
+section.section-padding
+  .container
+    +pagetitle('Portfolio', "Here are some of the<br>work I've done", 'mb-30')
+    +disclaymer('Disclaimer. All the works presented in this section are just a demonstration and do not apply to my real projects.', 'mb-60')
+    .portfolio
+      for item in portfolioList
+        +portfolio(item)

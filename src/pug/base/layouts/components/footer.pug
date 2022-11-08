@@ -1,0 +1,54 @@
+-
+    var footerLinks = [
+      {title: 'Design', link: '/work.html'},
+      {title: 'Development', link: '/work.html'},
+      {title: 'Branding', link: '/work.html'},
+      {title: 'Information', link: '/about.html'},
+      {title: 'Education Quality', link: '/about.html'},
+      {title: 'Job Experience', link: '/about.html'},
+      {title: 'Portfolio', link: '/work.html'},
+      {title: 'Linkedin', link: 'https://www.linkedin.com/'},
+      {title: 'Twitter', link: 'https://twitter.com/'},
+      {title: 'Instagram', link: 'https://www.instagram.com/'},
+      {title: 'Behance', link: 'https://www.behance.net/'}
+    ]
+
+mixin footerLink(item)
+  li: a(href= item.link)= item.title
+
+footer.footer
+  .container
+    .footer-wrap
+      .footer-contacts
+        .footer-contacts-logo
+          svg
+            use(xlink:href='img/icons/icons.svg#logo-light')
+        .footer-contacts-item
+          i.icon.icon-location-pin
+          span 2125 Rue Saint-Marc,<br>Montréal, QC H3H 2P1
+        .footer-contacts-item
+          i.icon.icon-mail
+          a(href='mailto:protexet@gmail.com') protexet@gmail.com
+      .footer-col
+        h4.footer-col-title Services
+        ul.footer-col-list
+          - for (var x = 0; x < 3; x++)
+            +footerLink(footerLinks[x])
+
+      .footer-col
+        h4.footer-col-title About
+        ul.footer-col-list
+          - for (var x = 3; x < 7; x++)
+            +footerLink(footerLinks[x])
+
+      .footer-col
+        h4.footer-col-title Social Media
+        ul.footer-col-list
+          - for (var x = 7; x < 11; x++)
+            +footerLink(footerLinks[x])
+
+    .footer-bottom
+      span Warning! All data on the site is for demonstration purposes only and does not contain personal data of a specific person. All matches are random. If you have any complaints, please send them using the #[a(href='/contact.html') feedback form]
+
+
+

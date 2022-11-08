@@ -1,0 +1,46 @@
+-
+    var social = [
+      {title: 'Li', name: 'Linkedin', link: 'https://www.linkedin.com/'},
+      {title: 'Tw', name: 'Twitter', link: 'https://twitter.com/'},
+      {title: 'Ig', name: 'Instagram', link: 'https://www.instagram.com/'},
+      {title: 'Bh', name: 'Behance', link: 'https://www.behance.net/'}
+    ]
+
+mixin socialItem(item)
+  li: a.tooltip-bottom(data-name= item.name href= item.link target='_blank')= item.title
+
+header.header
+  button.header-btn-close.js-close-header(type='button'): i.icon.icon-close
+  .container
+    .header-wrap
+      .header-left
+        .header-logo
+          if (page !== 'index')
+            a(href='/')
+              img(src='images/site/logo.svg' alt='Alex Project')
+              svg: use(xlink:href='img/icons/icons.svg#logo-light')
+          else
+            img(src='images/site/logo.svg' alt='Alex Project')
+            svg: use(xlink:href='img/icons/icons.svg#logo-light')
+        nav.header-menu
+          ul.header-menu-list
+            each val in ['index', 'about', 'works', 'contacts']
+              li(class=(val === page ? "active" : '')): a(href= val + '.html')= (val === 'index' ? 'home' : val)
+      .header-right
+        .header-social
+          ul.header-social-list
+            for item in social
+              +socialItem(item)
+        .header-btn
+          a.btn.btn-small.btn-theme(href='docs/cv_demo.pdf' download='CV Alex Project'): span Download CV
+
+section.header-mobile
+  .header-mobile-wrap
+    .header-mobile-logo
+      if (page !== 'index')
+        a(href='/')
+          svg: use(xlink:href='img/icons/icons.svg#logo-light')
+      else
+        svg: use(xlink:href='img/icons/icons.svg#logo-light')
+    .header-mobile-btn
+      button.header-mobile-btn-item.js-open-header(type='button'): i.icon.icon-menu

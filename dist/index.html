@@ -1,12 +1,217 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Навигация</title>
+    <title>Home | Alex project</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/main.css?v=0">
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    <!--favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!--end favicons-->
   </head>
   <body>
+    <header class="header">
+      <button class="header-btn-close js-close-header" type="button"><i class="icon icon-close"></i></button>
+      <div class="container">
+        <div class="header-wrap">
+          <div class="header-left">
+            <div class="header-logo"><img src="images/site/logo.svg" alt="Alex Project">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#logo-light"></use>
+              </svg>
+            </div>
+            <nav class="header-menu">
+              <ul class="header-menu-list">
+                <li class="active"><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="works.html">works</a></li>
+                <li><a href="contacts.html">contacts</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-right">
+            <div class="header-social">
+              <ul class="header-social-list">
+                    <li><a class="tooltip-bottom" data-name="Linkedin" href="https://www.linkedin.com/" target="_blank">Li</a></li>
+                    <li><a class="tooltip-bottom" data-name="Twitter" href="https://twitter.com/" target="_blank">Tw</a></li>
+                    <li><a class="tooltip-bottom" data-name="Instagram" href="https://www.instagram.com/" target="_blank">Ig</a></li>
+                    <li><a class="tooltip-bottom" data-name="Behance" href="https://www.behance.net/" target="_blank">Bh</a></li>
+              </ul>
+            </div>
+            <div class="header-btn"><a class="btn btn-small btn-theme" href="docs/cv_demo.pdf" download="CV Alex Project"><span>Download CV</span></a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="header-mobile">
+      <div class="header-mobile-wrap">
+        <div class="header-mobile-logo">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#logo-light"></use>
+          </svg>
+        </div>
+        <div class="header-mobile-btn">
+          <button class="header-mobile-btn-item js-open-header" type="button"><i class="icon icon-menu"></i></button>
+        </div>
+      </div>
+    </section>
+      <section class="top mb-100">
+        <div class="container">
+          <div class="top-wrap">
+            <div class="top-content">
+              <h1 class="top-content-title">Hi, i’m <span>Alex</span></h1>
+              <h2 class="top-content-subtitle">UI/UX Designer<br>and JS coder</h2>
+              <div class="top-content-text"><span>I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that.</span></div><a class="link-underline" href="works.html">My Works</a>
+            </div>
+            <div class="top-image"><img src="/images/top/top-home.jpg" loading="lazy"></div>
+          </div>
+        </div>
+      </section>
+    <section class="bg-grey section-padding">
+      <div class="container">
+          <div class="pagetitle mb-60">
+            <div class="pagetitle-top"><span>Services</span></div>
+            <h2 class="pagetitle-item">I have several<br>services for you</h2>
+          </div>
+        <div class="services">
+              <div class="services-item">
+                <div class="services-item-icon"><i class="icon icon-web-design"></i></div>
+                <h3 class="services-item-title">UI / UX Design</h3><span class="services-item-text">The smart and modern design of web applications will be appreciated by your users.</span>
+              </div>
+              <div class="services-item">
+                <div class="services-item-icon"><i class="icon icon-web-dev"></i></div>
+                <h3 class="services-item-title">Web Development</h3><span class="services-item-text">Professionally made projects of any complexity level with modern design and the highest reliability.</span>
+              </div>
+              <div class="services-item">
+                <div class="services-item-icon"><i class="icon icon-audit"></i></div>
+                <h3 class="services-item-title">Audit &amp; Optimization</h3><span class="services-item-text">I find technical problems, usability, and SEO issues in your website. Identify and offer solutions to resolve them.</span>
+              </div>
+              <div class="services-item">
+                <div class="services-item-icon"><i class="icon icon-mobile"></i></div>
+                <h3 class="services-item-title">Mobile Application</h3><span class="services-item-text">Development, publication, and technical support of mobile applications for iOS and Android.</span>
+              </div>
+              <div class="services-item">
+                <div class="services-item-icon"><i class="icon icon-devops"></i></div>
+                <h3 class="services-item-title">Devops</h3><span class="services-item-text">Software deployment service that will be a reliable link between product development and operation.</span>
+              </div>
+              <div class="services-item">
+                <div class="services-item-icon"><i class="icon icon-maintenance"></i></div>
+                <h3 class="services-item-title">Maintenance</h3><span class="services-item-text">Professional technical support for any projects: from websites and web services to mobile applications.</span>
+              </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-padding">
+      <div class="container">
+        <div class="about">
+          <div class="about-img"><img src="images/content/about.jpg" alt="About"></div>
+          <div class="about-content">
+              <div class="pagetitle mb-30">
+                <div class="pagetitle-top"><span>About</span></div>
+                <h2 class="pagetitle-item">Introducing me is<br>Full Stack Developer</h2>
+              </div>
+            <p>I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that.</p>
+            <p>I'm professional developer, who really like their job and sincerely appreciate all their customers. I developing web applications of various complexity levels. I create MVP for startups, web services, and API. I automate current business processes and design new ones improving service and helping to increase my customer’s sales figure at the same time.</p>
+            <p>Over the years of experience, I have got the hang of many effective techniques for development that are used to create web projects with smart design and high-quality program code. I save time and money for my customers, always choosing the most effective web solutions for them.</p>
+            <p>I really love whatever I do and always focus on customer’s goals. I develop an individual approach for each project. Each customer may be confident that maximum attention will be given to their project. All projects that I work on are unique and I are rightfully proud of that.</p><a class="link-underline" href="about.html">About me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-grey section-padding">
+      <div class="container">
+          <div class="pagetitle mb-60">
+            <div class="pagetitle-top"><span>MY Core Values</span></div>
+            <h2 class="pagetitle-item">I have several values that are<br>my strengths</h2>
+          </div>
+        <div class="strengths">
+              <div class="strengths-item">
+                <div class="strengths-item-icon">
+                  <svg>
+                    <use xlink:href="img/icons/icons.svg#why-01"></use>
+                  </svg>
+                </div>
+                <h3 class="strengths-item-title">Reputation</h3><span class="strengths-item-text">For more than 10 years I have been creating professional web projects of any complexity level from small websites to scalable online stores and corporate portals and more. </span>
+              </div>
+              <div class="strengths-item">
+                <div class="strengths-item-icon">
+                  <svg>
+                    <use xlink:href="img/icons/icons.svg#why-02"></use>
+                  </svg>
+                </div>
+                <h3 class="strengths-item-title">Creative</h3><span class="strengths-item-text">The first thing that the user sees is a design of the site and I make it creative and comfortable so that the user stays on the page and comes back to you again, helping the complicated task look simple.</span>
+              </div>
+              <div class="strengths-item">
+                <div class="strengths-item-icon">
+                  <svg>
+                    <use xlink:href="img/icons/icons.svg#why-03"></use>
+                  </svg>
+                </div>
+                <h3 class="strengths-item-title">Research</h3><span class="strengths-item-text">I also conduct research on an existing project, helping to identify and eliminate factors slowing down your business, as well as find new ways for its development. This approach can save you from expenses.</span>
+              </div>
+              <div class="strengths-item">
+                <div class="strengths-item-icon">
+                  <svg>
+                    <use xlink:href="img/icons/icons.svg#why-04"></use>
+                  </svg>
+                </div>
+                <h3 class="strengths-item-title">Maintenance</h3><span class="strengths-item-text">I provide professional technical support for the stable and smooth operation of your website or application. The experience and the tools I use will help to avoid a lot of violations in your service.</span>
+              </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrap">
+          <div class="footer-contacts">
+            <div class="footer-contacts-logo">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#logo-light"></use>
+              </svg>
+            </div>
+            <div class="footer-contacts-item"><i class="icon icon-location-pin"></i><span>2125 Rue Saint-Marc,<br>Montréal, QC H3H 2P1</span></div>
+            <div class="footer-contacts-item"><i class="icon icon-mail"></i><a href="mailto:protexet@gmail.com">protexet@gmail.com</a></div>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title">Services</h4>
+            <ul class="footer-col-list">
+                  <li><a href="/work.html">Design</a></li>
+                  <li><a href="/work.html">Development</a></li>
+                  <li><a href="/work.html">Branding</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title">About</h4>
+            <ul class="footer-col-list">
+                  <li><a href="/about.html">Information</a></li>
+                  <li><a href="/about.html">Education Quality</a></li>
+                  <li><a href="/about.html">Job Experience</a></li>
+                  <li><a href="/work.html">Portfolio</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title">Social Media</h4>
+            <ul class="footer-col-list">
+                  <li><a href="https://www.linkedin.com/">Linkedin</a></li>
+                  <li><a href="https://twitter.com/">Twitter</a></li>
+                  <li><a href="https://www.instagram.com/">Instagram</a></li>
+                  <li><a href="https://www.behance.net/">Behance</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom"><span>Warning! All data on the site is for demonstration purposes only and does not contain personal data of a specific person. All matches are random. If you have any complaints, please send them using the <a href="/contact.html">feedback form</a></span></div>
+      </div>
+    </footer>
     <script src="js/main.js?v=0"></script>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
   </body>
 </html>

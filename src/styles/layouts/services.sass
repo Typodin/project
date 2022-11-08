@@ -1,0 +1,51 @@
+.services
+  +breakpoint(s)
+    display: flex
+    flex-wrap: wrap
+    gap: 16px
+  &-item
+    flex: 0 1 auto
+    width: 100%
+    background-color: $white
+    padding: 15px
+    transition-duration: .2s
+    margin-bottom: 20px
+    +breakpoint(s)
+      margin-bottom: 0
+      padding: 25px 20px 30px
+      width: calc(50% - 8px)
+    +breakpoint(m)
+      width: calc(100% / 3 - 16px)
+    +breakpoint(l)
+      padding: 35px 30px 40px
+    &-icon
+      width: 80px
+      height: 80px
+      background-color: $grey-2
+      border-radius: 2px
+      position: relative
+      margin-bottom: 20px
+      line-height: 1
+      transition-duration: .3s
+      +breakpoint(l)
+        margin-bottom: 30px
+      & > .icon
+        font-size: $text-42
+        color: $theme-1
+        transition-duration: .3s
+        +abs-center
+    &-title
+      margin-bottom: 10px
+      font-size: $text-20
+      +breakpoint(l)
+        font-size: $text-24
+    &-text
+      display: block
+      color: $dark-2
+
+.services-item:hover
+  box-shadow: $shadow-0
+  .services-item-icon
+    background-color: $theme-1
+    & > .icon
+      color: $white

@@ -2,5 +2,17 @@ extends base/layouts/basic
 block vars
   - var page = 'index'
 block title
-  title Навигация
+  title Home | Alex project
 block content
+  +top(
+    'Hi, i’m <span>Alex</span>',
+    'UI/UX Designer<br>and JS coder',
+    'I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that.',
+    'works.html',
+    'My Works',
+    '/images/top/top-home.jpg',
+    'mb-100'
+    )
+  include base/layouts/content/services
+  include base/layouts/content/about
+  include base/layouts/content/strengths

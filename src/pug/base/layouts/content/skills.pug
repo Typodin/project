@@ -1,0 +1,31 @@
+-
+    var skillsList = [
+      {title: 'BSc in Computer Science', place: 'University of DVI (2006 - 2010)', text: 'The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture.'},
+      {title: 'AS - Science & Information', place: 'SuperKing College (2001 - 2005)', text: 'Higher education is tertiary education leading to award of an academic degree. '},
+      {title: 'Secondary School Education', place: 'Kingstar Secondary School (1998 - 2000)', text: 'Secondary education or post-primary education covers two phases on the International Standard Classification of Education scale.'},
+      {title: 'Sr. Software Engineer', place: 'Google Out Tech - (2017 - Present)', text: 'Google’s hiring process is an important part of our culture. Googlers care deeply about their teams and the people who make them up.'},
+      {title: 'Web Developer & Trainer', place: 'Apple Developer Team - (2012 - 2016)', text: 'A popular destination with a growing number of highly qualified homegrown graduates.'},
+      {title: 'Front-end Developer', place: 'Nike - (2020 - 2011)', text: 'The India economy has grown strongly over recent years, having transformed itself from a producer and innovation-based economy.'}
+    ]
+
+mixin skills(item)
+  .skills-item
+    .skills-item-wrap
+      h3.skills-item-title= item.title
+      span.skills-item-place= item.place
+      span.skills-item-text= item.text
+
+section.section-padding.bg-grey
+  .container
+    .skills.mb-60
+      .skills-col
+        +pagetitle('1998 - 2010', 'Education<br>Quality', 'mb-60')
+        .skills-col-list
+          - for (var x = 0; x < 3; x++)
+            +skills(skillsList[x])
+      .skills-col
+        +pagetitle('2010 - 2022', 'Job<br>Experience', 'mb-60')
+        .skills-col-list
+          - for (var x = 3; x < 6; x++)
+            +skills(skillsList[x])
+    +disclaymer('Warning. All information about education and experience is demo only.', 'text-center')
